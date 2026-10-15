@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #faf8f3;
+    color: #263238;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+
+.site-header {
+    padding: 25px 8%;
+    background-color: #123c36;
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    color: white;
+    font-size: 29px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-header p {
+    margin: 6px 0 0;
+    color: #d8e5df;
+    font-size: 14px;
+}
+
+/* Main page */
+
+.registration-page {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 0;
+}
+
+/* Introduction */
+
+.intro-section {
+    max-width: 720px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-label {
+    color: #a9683b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.intro-section h1 {
+    margin: 15px 0;
+    color: #123c36;
+    font-family: Georgia, serif;
+    font-size: 42px;
+}
+
+.intro-section p:not(.section-label) {
+    color: #6b7c76;
+    font-size: 17px;
+}
+
+/* Account type cards */
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.role-card {
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid #d8e5df;
+    border-top: 5px solid #1f6f5b;
+    border-radius: 12px;
+    box-shadow: 0 7px 18px rgba(18, 60, 54, 0.08);
+}
+
+.role-number {
+    margin: 0;
+    color: #c9824b;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.role-card h2 {
+    margin: 8px 0;
+    color: #123c36;
+    font-family: Georgia, serif;
+    font-size: 27px;
+}
+
+.role-card p:not(.role-number) {
+    min-height: 75px;
+    color: #6b7c76;
+    font-size: 15px;
+}
+
+.role-button {
+    display: block;
+    margin-top: 24px;
+    padding: 13px;
+    color: #ffffff;
+    background-color: #1f6f5b;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.role-button:hover {
+    background-color: #123c36;
+}
+
+/* Bottom links */
+
+.login-reminder {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.login-reminder p {
+    color: #6b7c76;
+}
+
+.login-reminder a {
+    color: #1f6f5b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-reminder a:hover {
+    color: #a9683b;
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* Footer */
+
+.site-footer {
+    padding: 22px;
+    color: #d8e5df;
+    background-color: #123c36;
+    text-align: center;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 700px) {
+
+    .registration-page {
+        padding: 45px 0;
+    }
+
+    .intro-section h1 {
+        font-size: 34px;
+    }
+
+    .role-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .role-card p:not(.role-number) {
+        min-height: auto;
+    }
+}

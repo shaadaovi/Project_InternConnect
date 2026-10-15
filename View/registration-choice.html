@@ -4,77 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Account Type | InternConnect</title>
+
+    <title>InternConnect | Choose Account Type</title>
+
+    <link rel="stylesheet" href="../Registration_css/registration-choice.css">
 </head>
 
 <body>
 
-    <center>
+    <header class="site-header">
 
-        <h1>InternConnect</h1>
+        <a class="logo" href="homepage.html">
+            InternConnect
+        </a>
+
+        <p>University Internship Management System</p>
+
+    </header>
+
+    <main class="registration-page">
+
+        <section class="intro-section">
+
+            <p class="section-label">CREATE YOUR ACCOUNT</p>
+
+            <h1>Choose Your Account Type</h1>
+
+            <p>
+                Select the account type that best describes you.
+                You will be directed to the appropriate registration form.
+            </p>
+
+        </section>
+
+        <section class="role-grid">
+
+            <article class="role-card">
+
+                <p class="role-number">01</p>
+
+                <h2>Student</h2>
+
+                <p>
+                    Create a student profile, discover internships and track
+                    your applications.
+                </p>
+
+                <a class="role-button"
+                   href="../Student_view/student-register.html">
+                    Register as Student
+                </a>
+
+            </article>
+
+            <article class="role-card">
+
+                <p class="role-number">02</p>
+
+                <h2>Company or Recruiter</h2>
+
+                <p>
+                    Post internship opportunities and connect with talented
+                    university students.
+                </p>
+
+                <a class="role-button"
+                   href="../Company_view/company-register.html">
+                    Register as Company
+                </a>
+
+            </article>
+
+            <article class="role-card">
+
+                <p class="role-number">03</p>
+
+                <h2>Faculty or Advisor</h2>
+
+                <p>
+                    Monitor student internships and provide academic guidance
+                    and recommendations.
+                </p>
+
+                <a class="role-button"
+                   href="../Faculty_view/faculty-register.html">
+                    Register as Faculty
+                </a>
+
+            </article>
+
+            <article class="role-card">
+
+                <p class="role-number">04</p>
+
+                <h2>Administrator</h2>
+
+                <p>
+                    Manage users, companies, internship posts and platform
+                    activities.
+                </p>
+
+                <a class="role-button"
+                   href="../Admin_view/admin-register.html">
+                    Register as Administrator
+                </a>
+
+            </article>
+
+        </section>
+
+        <section class="login-reminder">
+
+            <p>
+                Already have an account?
+                <a href="login.html">Log In here</a>
+            </p>
+
+            <a class="back-link" href="homepage.html">
+                Return to Homepage
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
 
         <p>
-            <em>Your pathway to university internship opportunities</em>
+            <small>&copy; 2026 InternConnect. All rights reserved.</small>
         </p>
 
-        <hr>
-
-        <h2>Choose Your Account Type</h2>
-
-        <p>Select your role to open the registration page.</p>
-
-        <br>
-
-        <form action="student-register.html">
-            <button type="submit">Register as Student</button>
-        </form>
-
-        <p>Find internships and begin your career journey.</p>
-
-        <br>
-
-        <form action="company-register.html">
-            <button type="submit">Register as Company / Recruiter</button>
-        </form>
-
-        <p>Post internship opportunities and connect with students.</p>
-
-        <br>
-
-        <form action="faculty-register.html">
-            <button type="submit">Register as Faculty / Advisor</button>
-        </form>
-
-        <p>Guide students and monitor their internship progress.</p>
-
-        <br>
-
-        <form action="admin-register.html">
-            <button type="submit">Register as Admin</button>
-        </form>
-
-        <p>Manage users and maintain the internship platform.</p>
-
-        <br>
-
-        <hr>
-
-        <p>
-            Already have an account?
-            <a href="login.html">Log In</a>
-        </p>
-
-        <p>
-            <a href="homepage.html">Back to Homepage</a>
-        </p>
-
-        <hr>
-
-        <p>
-            <small>&copy; 2026 InternConnect</small>
-        </p>
-
-    </center>
+    </footer>
 
 </body>
 
