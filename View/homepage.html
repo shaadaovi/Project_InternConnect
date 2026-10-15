@@ -7,107 +7,320 @@
 
     <title>InternConnect | Homepage</title>
 
-    <!-- Connect the external CSS file -->
-    <link rel="stylesheet" href="../Homepage_CSS/homepage.css">
+    <link rel="stylesheet" href="../Homepage_css/homepage.css">
 </head>
 
 <body>
 
     <header class="site-header">
-        <h1>🎓 InternConnect</h1>
 
-        <p class="tagline">
-            Your pathway to university internship opportunities
-        </p>
+        <nav class="navbar">
+
+            <a class="logo" href="homepage.html">InternConnect</a>
+
+            <div class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="internships.html">Internships</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-buttons">
+                <a class="login-button" href="login.html">Log In</a>
+                <a class="signup-button" href="registration-choice.html">Sign Up</a>
+            </div>
+
+        </nav>
+
     </header>
 
     <main>
 
         <section class="hero-section">
 
-            <img class="hero-image"
-                 src="internconnect-banner.jpeg"
-                 alt="Students exploring internship opportunities">
+            <div class="hero-content">
 
-            <h2>Welcome to InternConnect</h2>
+                <p class="small-heading">
+                    UNIVERSITY INTERNSHIP MANAGEMENT SYSTEM
+                </p>
 
-            <p>
-                InternConnect helps university students discover internships,
-                connect with companies and begin their career journey.
-            </p>
+                <h1>
+                    Connect Your Academic Journey with
+                    <span>Real-World Experience</span>
+                </h1>
 
-            <p>
-                Learn new skills, gain valuable experience and find opportunities
-                that match your goals.
-            </p>
+                <p class="hero-description">
+                    InternConnect helps students discover suitable internships,
+                    companies find talented students and universities manage
+                    internship activities in one organised platform.
+                </p>
+
+                <div class="hero-buttons">
+                    <a class="primary-button" href="internships.html">
+                        Find an Internship
+                    </a>
+
+                    <a class="secondary-button" href="registration-choice.html">
+                        Register Now
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-image-container">
+                <img src="internconnect-banner.jpeg"
+                     alt="Students exploring internship opportunities">
+            </div>
 
         </section>
 
-        <section class="journey-section">
+        <section class="statistics-section">
 
-            <h2>Continue Your Journey</h2>
+            <div class="stat-card">
+                <h2>1,200+</h2>
+                <p>Registered Students</p>
+            </div>
 
-            <p>
-                Log in to your account or create a new account to get started.
+            <div class="stat-card">
+                <h2>85+</h2>
+                <p>Partner Companies</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>320+</h2>
+                <p>Available Internships</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>540+</h2>
+                <p>Successful Placements</p>
+            </div>
+
+        </section>
+
+        <section class="content-section">
+
+            <p class="section-label">HOW IT WORKS</p>
+
+            <h2>Start Your Internship Journey</h2>
+
+            <p class="section-description">
+                Follow four simple steps to find, apply for and manage your
+                internship opportunities.
             </p>
 
-            <div class="button-area">
+            <div class="process-grid">
 
-                <form action="login.html">
-                    <button class="main-button" type="submit">
-                        🔐 Log In
-                    </button>
-                </form>
+                <article class="process-card">
+                    <div class="number">01</div>
+                    <h3>Create an Account</h3>
+                    <p>
+                        Register according to your role and complete your
+                        professional profile.
+                    </p>
+                </article>
 
-                <form action="registration-choice.html">
-                    <button class="main-button" type="submit">
-                        📝 Sign Up
-                    </button>
-                </form>
+                <article class="process-card">
+                    <div class="number">02</div>
+                    <h3>Find an Internship</h3>
+                    <p>
+                        Browse opportunities based on your skills, interests
+                        and academic background.
+                    </p>
+                </article>
+
+                <article class="process-card">
+                    <div class="number">03</div>
+                    <h3>Submit an Application</h3>
+                    <p>
+                        Review the details and submit your application through
+                        the platform.
+                    </p>
+                </article>
+
+                <article class="process-card">
+                    <div class="number">04</div>
+                    <h3>Track Your Progress</h3>
+                    <p>
+                        Monitor your application status, deadlines and updates.
+                    </p>
+                </article>
 
             </div>
 
         </section>
 
-        <section class="features-section">
+        <section class="content-section">
 
-            <h2>Why Choose InternConnect?</h2>
+            <div class="section-heading-row">
 
-            <ul>
-                <li>🔍 Find suitable internship opportunities</li>
-                <li>📄 Create your professional profile</li>
-                <li>🤝 Connect with companies and advisors</li>
-                <li>📊 Track your application progress</li>
-            </ul>
+                <div>
+                    <p class="section-label">OPPORTUNITIES</p>
+                    <h2>Featured Internships</h2>
+                </div>
+
+                <a class="view-all-link" href="internships.html">
+                    View All Internships
+                </a>
+
+            </div>
+
+            <div class="internship-grid">
+
+                <article class="internship-card">
+                    <p class="internship-type">FULL-TIME</p>
+                    <h3>Web Development Intern</h3>
+                    <p class="company-name">TechNova Solutions</p>
+                    <p>Location: Dhaka</p>
+                    <p>Duration: 3 months</p>
+                    <p>Deadline: 30 November 2026</p>
+
+                    <div class="skill-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a class="card-button" href="internship-details.html">
+                        View Details
+                    </a>
+                </article>
+
+                <article class="internship-card">
+                    <p class="internship-type">PART-TIME</p>
+                    <h3>Marketing Assistant Intern</h3>
+                    <p class="company-name">BrightPath Limited</p>
+                    <p>Location: Chattogram</p>
+                    <p>Duration: 4 months</p>
+                    <p>Deadline: 12 December 2026</p>
+
+                    <div class="skill-list">
+                        <span>Marketing</span>
+                        <span>Research</span>
+                        <span>Communication</span>
+                    </div>
+
+                    <a class="card-button" href="internship-details.html">
+                        View Details
+                    </a>
+                </article>
+
+                <article class="internship-card">
+                    <p class="internship-type">REMOTE</p>
+                    <h3>Data Analyst Intern</h3>
+                    <p class="company-name">Insight Analytics</p>
+                    <p>Location: Remote</p>
+                    <p>Duration: 6 months</p>
+                    <p>Deadline: 20 December 2026</p>
+
+                    <div class="skill-list">
+                        <span>Excel</span>
+                        <span>Data Analysis</span>
+                        <span>Reports</span>
+                    </div>
+
+                    <a class="card-button" href="internship-details.html">
+                        View Details
+                    </a>
+                </article>
+
+            </div>
 
         </section>
 
-        <section class="about-section">
+        <section class="benefits-section">
 
-            <h2>About Us</h2>
+            <p class="section-label">WHY INTERNCONNECT</p>
+
+            <h2>Designed to Support Your Career Goals</h2>
+
+            <div class="benefits-grid">
+
+                <article class="benefit-card">
+                    <h3>Verified Opportunities</h3>
+                    <p>
+                        Explore internship posts submitted by verified
+                        companies.
+                    </p>
+                </article>
+
+                <article class="benefit-card">
+                    <h3>Easy Application Process</h3>
+                    <p>
+                        Apply for suitable internships through a clear process.
+                    </p>
+                </article>
+
+                <article class="benefit-card">
+                    <h3>Application Tracking</h3>
+                    <p>
+                        Follow every application from your personal dashboard.
+                    </p>
+                </article>
+
+                <article class="benefit-card">
+                    <h3>University Support</h3>
+                    <p>
+                        Faculty members can monitor student internship activity.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="call-to-action">
+
+            <h2>Ready to Begin Your Professional Journey?</h2>
 
             <p>
-                InternConnect brings students, companies and faculty members
-                together through one internship platform.
+                Create your account and take the next step toward meaningful
+                internship experience.
             </p>
 
-            <h2>Contact</h2>
-
-            <p>
-                Email:
-                <a href="mailto:internconnect@example.com">
-                    internconnect@example.com
-                </a>
-            </p>
+            <a class="primary-button" href="registration-choice.html">
+                Create Your Account
+            </a>
 
         </section>
 
     </main>
 
     <footer class="site-footer">
-        <p>
-            <small>&copy; 2026 InternConnect. All rights reserved.</small>
+
+        <div class="footer-grid">
+
+            <div>
+                <h2>InternConnect</h2>
+                <p>
+                    A university internship management system connecting
+                    students, companies and academic advisors.
+                </p>
+            </div>
+
+            <div>
+                <h3>Important Links</h3>
+                <a href="homepage.html">Home</a>
+                <a href="internships.html">Internships</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div>
+                <h3>Contact Information</h3>
+                <p>Email: internconnect@example.com</p>
+                <p>Phone: +880 1700 000000</p>
+                <p>Dhaka, Bangladesh</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            &copy; 2026 InternConnect. All rights reserved.
         </p>
+
     </footer>
 
 </body>

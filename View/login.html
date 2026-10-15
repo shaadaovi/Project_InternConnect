@@ -4,95 +4,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In | InternConnect</title>
+
+    <title>InternConnect | Log In</title>
+
+    <link rel="stylesheet" href="../Login_css/login.css">
 </head>
 
 <body>
 
-    <center>
+    <header class="site-header">
 
-        <h1>InternConnect</h1>
+        <a class="logo" href="homepage.html">
+            InternConnect
+        </a>
+
+        <p>University Internship Management System</p>
+
+    </header>
+
+    <main class="login-page">
+
+        <section class="login-introduction">
+
+            <p class="section-label">WELCOME BACK</p>
+
+            <h1>Access Your Internship Dashboard</h1>
+
+            <p>
+                Log in to manage your internship activities, applications,
+                messages, notifications and professional profile.
+            </p>
+
+            <div class="management-features">
+
+                <div class="feature-item">
+                    <h3>Manage Applications</h3>
+                    <p>View and track your internship application progress.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h3>Discover Opportunities</h3>
+                    <p>Explore internships suited to your skills and goals.</p>
+                </div>
+
+                <div class="feature-item">
+                    <h3>Stay Connected</h3>
+                    <p>Receive updates from companies and university advisors.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="login-card">
+
+            <h2>Log In to Your Account</h2>
+
+            <p class="login-description">
+                Enter your details to continue to your dashboard.
+            </p>
+
+            <form action="student-dashboard.html" method="get">
+
+                <div class="form-group">
+
+                    <label for="account-type">Account Type</label>
+
+                    <select id="account-type"
+                            name="account-type"
+                            required>
+
+                        <option value="">Select your account type</option>
+                        <option value="student">Student</option>
+                        <option value="company">Company or Recruiter</option>
+                        <option value="faculty">Faculty or Advisor</option>
+                        <option value="admin">Administrator</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="user-id">User ID or Email</label>
+
+                    <input type="text"
+                           id="user-id"
+                           name="user-id"
+                           placeholder="Enter your user ID or email"
+                           required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="password">Password</label>
+
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           placeholder="Enter your password"
+                           required>
+
+                </div>
+
+                <div class="form-options">
+
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember-me">
+                        Remember me
+                    </label>
+
+                    <a href="forgot-password.html">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+                <button class="login-button" type="submit">
+                    Log In
+                </button>
+
+            </form>
+
+            <p class="signup-text">
+                Do not have an account?
+                <a href="registration-choice.html">Create an account</a>
+            </p>
+
+            <p class="back-home">
+                <a href="homepage.html">Return to Homepage</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
 
         <p>
-            <em>Your pathway to university internship opportunities</em>
+            <small>&copy; 2026 InternConnect. All rights reserved.</small>
         </p>
 
-        <hr>
-
-        <h2>Welcome Back!</h2>
-
-        <p>Log in to continue your internship journey.</p>
-
-        <br>
-
-        <form action="portal.html" method="get">
-
-            <label for="user-id">
-                <strong>User ID</strong>
-            </label>
-
-            <br><br>
-
-            <input type="text"
-                   id="user-id"
-                   placeholder="Enter your user ID"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="password">
-                <strong>Password</strong>
-            </label>
-
-            <br><br>
-
-            <input type="password"
-                   id="password"
-                   placeholder="Enter your password"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <button type="submit">Log In</button>
-
-        </form>
-
-        <br>
-
-        <p>New to InternConnect?</p>
-
-        <form action="registration-choice.html">
-            <button type="submit">Register Now</button>
-        </form>
-
-        <br>
-
-        <p>
-            <a href="homepage.html">Back to Homepage</a>
-        </p>
-
-        <hr>
-
-        <h3>About Us</h3>
-
-        <p>
-            InternConnect connects students, companies and faculty
-            members for successful internship experiences.
-        </p>
-
-        <h3>Contact</h3>
-
-        <p>Email: internconnect@example.com</p>
-
-        <hr>
-
-        <p>
-            <small>&copy; 2026 InternConnect</small>
-        </p>
-
-    </center>
+    </footer>
 
 </body>
 
