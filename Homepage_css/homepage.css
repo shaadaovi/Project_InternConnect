@@ -522,3 +522,176 @@ main {
         display: block;
     }
 }
+
+/* Moving announcement */
+
+.announcement {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 11px;
+    color: #123c36;
+    background-color: #e3eee9;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.announcement span {
+    display: inline-block;
+    animation: moveAnnouncement 14s linear infinite;
+}
+
+@keyframes moveAnnouncement {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Hero text appears smoothly */
+
+.hero-content {
+    animation: slideFromLeft 2.2s ease-out;
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Hero image appears from the right */
+
+.hero-image-container {
+    animation: slideFromRight 2.2s ease-out;
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Image gently moves up and down */
+
+.hero-image-container img {
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Heading highlight */
+
+.hero-content h1 span {
+    animation: highlightText 4s ease-in-out infinite alternate;
+}
+
+@keyframes highlightText {
+    from {
+        color: #1f6f5b;
+    }
+
+    to {
+        color: #c9824b;
+    }
+}
+
+/* Cards appear upward */
+
+.process-card,
+.internship-card,
+.benefit-card {
+    animation: cardAppear 2s ease-out;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cards move slightly when hovered */
+
+.process-card:hover,
+.internship-card:hover,
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(18, 60, 54, 0.15);
+}
+
+/* Buttons move when hovered */
+
+.primary-button,
+.secondary-button,
+.card-button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.card-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Statistics cards appear one after another */
+
+.stat-card {
+    animation: statisticsAppear 1s ease-out;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.stat-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes statisticsAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
