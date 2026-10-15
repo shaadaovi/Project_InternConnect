@@ -4,84 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>InternConnect | Homepage</title>
+
+    <!-- Connect the external CSS file -->
+    <link rel="stylesheet" href="../Homepage_CSS/homepage.css">
 </head>
 
 <body>
 
-    <center>
+    <header class="site-header">
+        <h1>🎓 InternConnect</h1>
 
-        <h1>InternConnect</h1>
-
-        <p>
-            <em>Your pathway to university internship opportunities</em>
+        <p class="tagline">
+            Your pathway to university internship opportunities
         </p>
+    </header>
 
-        <hr>
+    <main>
 
-        <img src="internconnect-banner.jpeg"
-             alt="Students exploring internship opportunities"
-             width="800">
+        <section class="hero-section">
 
-        <h2>Welcome to InternConnect</h2>
+            <img class="hero-image"
+                 src="internconnect-banner.jpeg"
+                 alt="Students exploring internship opportunities">
 
+            <h2>Welcome to InternConnect</h2>
+
+            <p>
+                InternConnect helps university students discover internships,
+                connect with companies and begin their career journey.
+            </p>
+
+            <p>
+                Learn new skills, gain valuable experience and find opportunities
+                that match your goals.
+            </p>
+
+        </section>
+
+        <section class="journey-section">
+
+            <h2>Continue Your Journey</h2>
+
+            <p>
+                Log in to your account or create a new account to get started.
+            </p>
+
+            <div class="button-area">
+
+                <form action="login.html">
+                    <button class="main-button" type="submit">
+                        🔐 Log In
+                    </button>
+                </form>
+
+                <form action="registration-choice.html">
+                    <button class="main-button" type="submit">
+                        📝 Sign Up
+                    </button>
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="features-section">
+
+            <h2>Why Choose InternConnect?</h2>
+
+            <ul>
+                <li>🔍 Find suitable internship opportunities</li>
+                <li>📄 Create your professional profile</li>
+                <li>🤝 Connect with companies and advisors</li>
+                <li>📊 Track your application progress</li>
+            </ul>
+
+        </section>
+
+        <section class="about-section">
+
+            <h2>About Us</h2>
+
+            <p>
+                InternConnect brings students, companies and faculty members
+                together through one internship platform.
+            </p>
+
+            <h2>Contact</h2>
+
+            <p>
+                Email:
+                <a href="mailto:internconnect@example.com">
+                    internconnect@example.com
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
         <p>
-            InternConnect helps university students discover internships,
-            connect with companies and begin their career journey.
+            <small>&copy; 2026 InternConnect. All rights reserved.</small>
         </p>
-
-        <p>
-            Learn new skills, gain valuable experience and find opportunities
-            that match your goals.
-        </p>
-
-        <br>
-
-        <h2>Continue Your Journey</h2>
-
-        <br>
-
-        <form action="login.html">
-            <button type="submit"><big><big>Log In</big></big></button>
-        </form>
-
-        <br>
-
-        <form action="registration-choice.html">
-            <button type="submit"><big><big>Sign Up</big></big></button>
-        </form>
-
-        <br>
-
-        <hr>
-
-        <h3>Why Choose InternConnect?</h3>
-
-        <p>Find suitable internship opportunities</p>
-        <p>Create your professional profile</p>
-        <p>Connect with companies and advisors</p>
-        <p>Track your application progress</p>
-
-        <hr>
-
-        <h3>About Us</h3>
-
-        <p>
-            InternConnect brings students, companies and faculty members
-            together through one internship platform.
-        </p>
-
-        <h3>Contact</h3>
-
-        <p>Email: internconnect@example.com</p>
-
-        <hr>
-
-        <p>
-            <small>&copy; 2026 InternConnect</small>
-        </p>
-
-    </center>
+    </footer>
 
 </body>
 

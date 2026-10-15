@@ -1,0 +1,149 @@
+/* General page design */
+
+body {
+    margin: 0;
+    background-color: #f1f7fb;
+    color: #263746;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Header */
+
+.site-header {
+    background-color: #123c5a;
+    color: white;
+    padding: 35px 15px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.tagline {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 12px;
+}
+
+/* Main content */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hero-section {
+    padding: 35px 15px;
+}
+
+.hero-section h2,
+.journey-section h2,
+.features-section h2,
+.about-section h2 {
+    color: #123c5a;
+    font-size: 28px;
+}
+
+.hero-section p {
+    max-width: 750px;
+    margin: 15px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Banner image */
+
+.hero-image {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 5px solid white;
+}
+
+/* Login and sign-up section */
+
+.journey-section {
+    background-color: white;
+    padding: 30px 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+}
+
+.journey-section p {
+    font-size: 17px;
+}
+
+.button-area {
+    margin-top: 25px;
+}
+
+.button-area form {
+    display: inline-block;
+    margin: 10px;
+}
+
+.main-button {
+    background-color: #1d7a8c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background-color: #145766;
+}
+
+/* Features section */
+
+.features-section {
+    background-color: #e2f0f5;
+    padding: 30px 15px;
+    margin: 25px 0;
+    border-radius: 12px;
+}
+
+.features-section ul {
+    padding: 0;
+    list-style-position: inside;
+}
+
+.features-section li {
+    margin: 15px;
+    font-size: 17px;
+}
+
+/* About and contact */
+
+.about-section {
+    background-color: white;
+    padding: 30px 15px;
+    margin: 25px 0;
+    border-radius: 12px;
+}
+
+.about-section p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.about-section a {
+    color: #1d7a8c;
+    font-weight: bold;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #123c5a;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
