@@ -9,7 +9,7 @@
 
 <body>
 
-    <center>
+    <div align="center">
 
         <h1>InternConnect</h1>
 
@@ -74,41 +74,38 @@
 
             <br><br>
 
-          
-<label for="department">
-    <strong>Department</strong>
-</label>
-
-<br><br>
-
-<input type="text"
-       id="department"
-       name="department"
-       placeholder="Enter your department"
-       size="35"
-       required>
-
-
-
+            <label for="department">
+                <strong>Department</strong>
+            </label>
 
             <br><br>
 
-            
-<label for="designation">
-    <strong>Designation</strong>
-</label>
+            <select id="department" name="department" required>
+                <option value="">Select your department</option>
+                <option value="CSE">Computer Science and Engineering</option>
+                <option value="EEE">Electrical and Electronic Engineering</option>
+                <option value="BBA">Business Administration</option>
+                <option value="English">English</option>
+                <option value="Other">Other</option>
+            </select>
 
-<br><br>
+            <br><br>
 
-<input type="text"
-       id="designation"
-       name="designation"
-       placeholder="Enter your designation"
-       size="35"
-       required>
+            <label for="designation">
+                <strong>Designation</strong>
+            </label>
 
+            <br><br>
 
-
+            <select id="designation" name="designation" required>
+                <option value="">Select your designation</option>
+                <option value="Lecturer">Lecturer</option>
+                <option value="Senior Lecturer">Senior Lecturer</option>
+                <option value="Assistant Professor">Assistant Professor</option>
+                <option value="Associate Professor">Associate Professor</option>
+                <option value="Professor">Professor</option>
+                <option value="Academic Advisor">Academic Advisor</option>
+            </select>
 
             <br><br>
 
@@ -148,11 +145,11 @@
 
             <br><br>
 
-            <input type="text"
-                   id="expertise"
-                   name="expertise"
-                   placeholder="e.g. Software Engineering, AI"
-                   size="35">
+            <textarea id="expertise"
+                      name="expertise"
+                      rows="3"
+                      cols="35"
+                      placeholder="Describe your area of expertise"></textarea>
 
             <br><br>
 
@@ -166,6 +163,7 @@
                    id="password"
                    name="password"
                    placeholder="Create a password"
+                   minlength="8"
                    size="35"
                    required>
 
@@ -187,7 +185,7 @@
             <br><br>
 
             <button type="submit">
-                <big>Register as Faculty / Advisor</big>
+                Register as Faculty / Advisor
             </button>
 
         </form>
@@ -215,8 +213,9 @@
             <small>&copy; 2026 InternConnect</small>
         </p>
 
-    </center>
+    </div>
 
 </body>
 
 </html>
+```
