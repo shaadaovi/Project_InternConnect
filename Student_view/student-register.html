@@ -1,202 +1,489 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Student Registration | InternConnect</title>
+
+    <link rel="stylesheet" href="../Student_css/student-register.css">
 </head>
 
 <body>
 
-    <center>
+    <header class="site-header">
 
-        <h1>InternConnect</h1>
+        <div class="header-container">
 
-        <p>
-            <em>Student Registration</em>
-        </p>
-
-        <hr>
-
-        <h2>Create Your Student Account</h2>
-
-        <p>
-            Register to find internships and begin your career journey.
-        </p>
-
-        <br>
-
-        <form action="student-portal.html" method="get">
-
-            <label for="full-name">
-                <strong>Full Name</strong>
-            </label>
-
-            <br><br>
-
-            <input type="text"
-                   id="full-name"
-                   name="full_name"
-                   placeholder="Enter your full name"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="student-id">
-                <strong>Student ID</strong>
-            </label>
-
-            <br><br>
-
-            <input type="text"
-                   id="student-id"
-                   name="student_id"
-                   placeholder="Enter your student ID"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="university">
-                <strong>University Name</strong>
-            </label>
-
-            <br><br>
-
-            <input type="text"
-                   id="university"
-                   name="university"
-                   placeholder="Enter your university name"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="program">
-                <strong>Program or Department</strong>
-            </label>
-
-            <br><br>
-
-            <input type="text"
-                   id="program"
-                   name="program"
-                   placeholder="Enter your program or department"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="study-year">
-                <strong>Current Year of Study</strong>
-            </label>
-
-            <br><br>
-
-            <select id="study-year" name="study_year" required>
-                <option value="">-- Select your year --</option>
-                <option value="first-year">First Year</option>
-                <option value="second-year">Second Year</option>
-                <option value="third-year">Third Year</option>
-                <option value="fourth-year">Fourth Year</option>
-                <option value="postgraduate">Postgraduate</option>
-            </select>
-
-            <br><br>
-
-            <label for="email">
-                <strong>Email Address</strong>
-            </label>
-
-            <br><br>
-
-            <input type="email"
-                   id="email"
-                   name="email"
-                   placeholder="Enter your email address"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="phone">
-                <strong>Contact Number</strong>
-            </label>
-
-            <br><br>
-
-            <input type="tel"
-                   id="phone"
-                   name="phone"
-                   placeholder="Enter your contact number"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="password">
-                <strong>Password</strong>
-            </label>
-
-            <br><br>
-
-            <input type="password"
-                   id="password"
-                   name="password"
-                   placeholder="Create a password"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="confirm-password">
-                <strong>Confirm Password</strong>
-            </label>
-
-            <br><br>
-
-            <input type="password"
-                   id="confirm-password"
-                   name="confirm_password"
-                   placeholder="Re-enter your password"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <button type="submit">
-                <big>Register as Student</big>
-            </button>
-
-        </form>
-
-        <br>
-
-        <p>
-            Already have an account?
-            <a href="login.html">Log In</a>
-        </p>
-
-        <p>
-            <a href="registration-choice.html">
-                Back to Account Type Selection
+            <a href="../View/homepage.html" class="logo">
+                InternConnect
             </a>
-        </p>
+
+            <nav class="navigation">
+                <a href="../View/homepage.html">Home</a>
+                <a href="../View/internships.html">Internships</a>
+                <a href="../View/about.html">About</a>
+                <a href="../View/contact.html">Contact</a>
+            </nav>
+
+            <a href="../View/login.html" class="login-link">
+                Log In
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="page-container">
+
+        <section class="welcome-panel">
+
+            <div class="panel-badge">
+                Student Registration
+            </div>
+
+            <div class="decorative-circle circle-one"></div>
+            <div class="decorative-circle circle-two"></div>
+
+            <div class="welcome-content">
+
+                <p class="eyebrow">
+                    BEGIN YOUR JOURNEY
+                </p>
+
+                <h1>
+                    Build Your Career with InternConnect
+                </h1>
+
+                <p>
+                    Create your student account to discover internships,
+                    apply for opportunities and track your applications.
+                </p>
+
+                <div class="benefit-list">
+                    <p>Find suitable internship opportunities</p>
+                    <p>Create your professional profile</p>
+                    <p>Track your applications</p>
+                    <p>Connect with companies and advisors</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="form-panel">
+
+            <div class="form-card">
+
+                <div class="form-heading">
+
+                    <p class="eyebrow">
+                        CREATE YOUR ACCOUNT
+                    </p>
+
+                    <h2>
+                        Student Registration
+                    </h2>
+
+                    <p>
+                        Please complete the form below to register as a student.
+                    </p>
+
+                </div>
+
+
+                <form action="#" method="post">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="first-name">
+                                First Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="first-name"
+                                name="first-name"
+                                placeholder="Enter your first name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="last-name">
+                                Last Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="last-name"
+                                name="last-name"
+                                placeholder="Enter your last name"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="username">
+                            Username <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Choose a username"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="university-email">
+                            University Email <span>*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="university-email"
+                            name="university-email"
+                            placeholder="yourname@aiub.edu"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="personal-email">
+                            Personal Email <span>*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="personal-email"
+                            name="personal-email"
+                            placeholder="example@gmail.com"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="student-id">
+                            Student ID <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="student-id"
+                            name="student-id"
+                            placeholder="Enter your AIUB student ID"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="program">
+                            Department or Programme <span>*</span>
+                        </label>
+
+                        <select id="program" name="program" required>
+
+                            <option value="">
+                                Select your programme
+                            </option>
+
+                            <option value="bba">
+                                Bachelor of Business Administration
+                            </option>
+
+                            <option value="cse">
+                                Bachelor of Science in Computer Science and Engineering
+                            </option>
+
+                            <option value="eee">
+                                Bachelor of Science in Electrical and Electronic Engineering
+                            </option>
+
+                            <option value="coe">
+                                Bachelor of Science in Computer Engineering
+                            </option>
+
+                            <option value="ipe">
+                                Bachelor of Science in Industrial and Production Engineering
+                            </option>
+
+                            <option value="architecture">
+                                Bachelor of Architecture
+                            </option>
+
+                            <option value="pharmacy">
+                                Bachelor of Pharmacy
+                            </option>
+
+                            <option value="data-science">
+                                Bachelor of Science in Data Science
+                            </option>
+
+                            <option value="cyber-security">
+                                Bachelor of Science in Computer Network and Cyber Security
+                            </option>
+
+                            <option value="english">
+                                Bachelor of Arts in English
+                            </option>
+
+                            <option value="law">
+                                Bachelor of Laws
+                            </option>
+
+                            <option value="economics">
+                                Bachelor of Social Science in Economics
+                            </option>
+
+                            <option value="journalism">
+                                Bachelor of Social Science in Journalism and Mass Communication
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="study-year">
+                                Current Study Year <span>*</span>
+                            </label>
+
+                            <select id="study-year" name="study-year" required>
+
+                                <option value="">
+                                    Select study year
+                                </option>
+
+                                <option value="first-year">
+                                    First Year
+                                </option>
+
+                                <option value="second-year">
+                                    Second Year
+                                </option>
+
+                                <option value="third-year">
+                                    Third Year
+                                </option>
+
+                                <option value="fourth-year">
+                                    Fourth Year
+                                </option>
+
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="graduation-year">
+                                Expected Graduation Year <span>*</span>
+                            </label>
+
+                            <select id="graduation-year" name="graduation-year" required>
+
+                                <option value="">
+                                    Select year
+                                </option>
+
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="contact-number">
+                            Contact Number <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="contact-number"
+                            name="contact-number"
+                            placeholder="01XXXXXXXXX"
+                            pattern="[0-9]{11}"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="current-address">
+                            Current Address <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="current-address"
+                            name="current-address"
+                            rows="3"
+                            placeholder="Enter your current address"
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="city">
+                                City <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                placeholder="For example: Dhaka"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="country">
+                                Country <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="country"
+                                name="country"
+                                value="Bangladesh"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="skills">
+                            Skills
+                        </label>
+
+                        <textarea
+                            id="skills"
+                            name="skills"
+                            rows="4"
+                            placeholder="For example: HTML, CSS, JavaScript"
+                        ></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="password">
+                            Password <span>*</span>
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="confirm-password">
+                            Confirm Password <span>*</span>
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirm-password"
+                            placeholder="Confirm your password"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="terms-box">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            required
+                        >
+
+                        <label for="terms">
+                            I agree to the terms and conditions.
+                        </label>
+
+                    </div>
+
+
+                    <div class="button-row">
+
+                        <button type="reset" class="reset-button">
+                            Clear Form
+                        </button>
+
+                        <button type="submit" class="submit-button">
+                            Create Student Account
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <p class="bottom-link">
+                    Already have an account?
+                    <a href="../View/login.html">
+                        Log in here
+                    </a>
+                </p>
+
+
+                <p class="bottom-link">
+                    <a href="../View/registration-choice.html">
+                        Choose a different account type
+                    </a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
 
         <p>
-            <a href="homepage.html">Back to Homepage</a>
+            <small>
+                &copy; 2026 InternConnect. All rights reserved.
+            </small>
         </p>
 
-        <hr>
-
-        <p>
-            <small>&copy; 2026 InternConnect</small>
-        </p>
-
-    </center>
+    </footer>
 
 </body>
 
