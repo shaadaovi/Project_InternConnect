@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,217 +6,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Registration | InternConnect</title>
+
+    <link rel="stylesheet" href="../Registration_css/faculty-register.css">
 </head>
 
-<body>
+<body id="top">
 
-    <div align="center">
+    <div class="page-wrapper">
 
-        <h1>InternConnect</h1>
+        <header class="site-header">
+            <a href="../View/homepage.html" class="logo">InternConnect</a>
 
-        <p>
-            <em>Faculty / Advisor Registration</em>
-        </p>
+            <nav class="top-nav">
+                <a href="../View/homepage.html">Home</a>
+                <a href="../View/about.html">About</a>
+                <a href="../View/contact.html">Contact</a>
+            </nav>
+        </header>
 
-        <hr>
+        <main class="registration-page">
 
-        <h2>Create a Faculty Account</h2>
+            <section class="intro-section">
+                <p class="section-label">FACULTY &amp; ADVISORS</p>
+                <h1>Guide Futures.<br>Build Opportunities.</h1>
+                <p>
+                    Create your faculty account to help students discover
+                    internship opportunities and develop their careers.
+                </p>
+            </section>
 
-        <p>
-            Please enter your information to register as a faculty member or academic advisor.
-        </p>
+            <section class="registration-card">
 
-        <br>
+                <div class="card-decoration"></div>
 
-        <form action="faculty-portal.html" method="get">
+                <div class="card-heading">
+                    <h2>Create a Faculty Account</h2>
+                    <p>Please enter your professional information below.</p>
+                </div>
 
-            <label for="full-name">
-                <strong>Full Name</strong>
-            </label>
+                <form action="faculty-portal.html" method="get"
+                      class="registration-form">
 
-            <br><br>
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full_name"
+                               placeholder="Enter your full name" required>
+                    </div>
 
-            <input type="text"
-                   id="full-name"
-                   name="full_name"
-                   placeholder="Enter your full name"
-                   size="35"
-                   required>
+                    <div class="form-group">
+                        <label for="faculty-id">Faculty / Employee ID</label>
+                        <input type="text" id="faculty-id" name="faculty_id"
+                               placeholder="Enter your faculty ID" required>
+                    </div>
 
-            <br><br>
+                    <div class="form-group">
+                        <label for="university">University Name</label>
+                        <input type="text" id="university" name="university"
+                               placeholder="Enter your university name" required>
+                    </div>
 
-            <label for="faculty-id">
-                <strong>Faculty / Employee ID</strong>
-            </label>
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department" name="department" required>
+                            <option value="">Select your department</option>
+                            <option value="CSE">Computer Science and Engineering</option>
+                            <option value="EEE">Electrical and Electronic Engineering</option>
+                            <option value="BBA">Business Administration</option>
+                            <option value="English">English</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
 
-            <br><br>
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <select id="designation" name="designation" required>
+                            <option value="">Select your designation</option>
+                            <option value="Lecturer">Lecturer</option>
+                            <option value="Senior Lecturer">Senior Lecturer</option>
+                            <option value="Assistant Professor">Assistant Professor</option>
+                            <option value="Associate Professor">Associate Professor</option>
+                            <option value="Professor">Professor</option>
+                            <option value="Academic Advisor">Academic Advisor</option>
+                        </select>
+                    </div>
 
-            <input type="text"
-                   id="faculty-id"
-                   name="faculty_id"
-                   placeholder="Enter your faculty ID"
-                   size="35"
-                   required>
+                    <div class="form-group">
+                        <label for="email">Official Email Address</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="Enter your university email" required>
+                    </div>
 
-            <br><br>
+                    <div class="form-group">
+                        <label for="phone">Contact Number</label>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="Enter your contact number" required>
+                    </div>
 
-            <label for="university">
-                <strong>University Name</strong>
-            </label>
+                    <div class="form-group">
+                        <label for="expertise">Area of Expertise</label>
+                        <textarea id="expertise" name="expertise" rows="3"
+                                  placeholder="e.g. Software Engineering, AI"></textarea>
+                    </div>
 
-            <br><br>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password"
+                               placeholder="Create a password"
+                               minlength="8" required>
+                    </div>
 
-            <input type="text"
-                   id="university"
-                   name="university"
-                   placeholder="Enter your university name"
-                   size="35"
-                   required>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password"
+                               name="confirm_password"
+                               placeholder="Re-enter your password" required>
+                    </div>
 
-            <br><br>
+                    <div class="form-actions">
+                        <button type="submit">Register as Faculty / Advisor</button>
+                    </div>
 
-            <label for="department">
-                <strong>Department</strong>
-            </label>
+                </form>
 
-            <br><br>
+                <div class="card-footer">
+                    <p>Already have an account?
+                        <a href="../View/login.html">Log In</a>
+                    </p>
 
-            <select id="department" name="department" required>
-                <option value="">Select your department</option>
-                <option value="CSE">Computer Science and Engineering</option>
-                <option value="EEE">Electrical and Electronic Engineering</option>
-                <option value="BBA">Business Administration</option>
-                <option value="English">English</option>
-                <option value="Other">Other</option>
-            </select>
+                    <p>
+                        <a href="../View/registration-choice.html">
+                            Back to Account Type Selection
+                        </a>
+                    </p>
 
-            <br><br>
+                    <p>
+                        <a href="../View/homepage.html">Back to Homepage</a>
+                    </p>
+                </div>
 
-            <label for="designation">
-                <strong>Designation</strong>
-            </label>
+            </section>
 
-            <br><br>
+        </main>
 
-            <select id="designation" name="designation" required>
-                <option value="">Select your designation</option>
-                <option value="Lecturer">Lecturer</option>
-                <option value="Senior Lecturer">Senior Lecturer</option>
-                <option value="Assistant Professor">Assistant Professor</option>
-                <option value="Associate Professor">Associate Professor</option>
-                <option value="Professor">Professor</option>
-                <option value="Academic Advisor">Academic Advisor</option>
-            </select>
+        <footer class="site-footer">
+            <p>&copy; 2026 InternConnect. All rights reserved.</p>
+        </footer>
 
-            <br><br>
-
-            <label for="email">
-                <strong>Official Email Address</strong>
-            </label>
-
-            <br><br>
-
-            <input type="email"
-                   id="email"
-                   name="email"
-                   placeholder="Enter your university email"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="phone">
-                <strong>Contact Number</strong>
-            </label>
-
-            <br><br>
-
-            <input type="tel"
-                   id="phone"
-                   name="phone"
-                   placeholder="Enter your contact number"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="expertise">
-                <strong>Area of Expertise</strong>
-            </label>
-
-            <br><br>
-
-            <textarea id="expertise"
-                      name="expertise"
-                      rows="3"
-                      cols="35"
-                      placeholder="Describe your area of expertise"></textarea>
-
-            <br><br>
-
-            <label for="password">
-                <strong>Password</strong>
-            </label>
-
-            <br><br>
-
-            <input type="password"
-                   id="password"
-                   name="password"
-                   placeholder="Create a password"
-                   minlength="8"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <label for="confirm-password">
-                <strong>Confirm Password</strong>
-            </label>
-
-            <br><br>
-
-            <input type="password"
-                   id="confirm-password"
-                   name="confirm_password"
-                   placeholder="Re-enter your password"
-                   size="35"
-                   required>
-
-            <br><br>
-
-            <button type="submit">
-                Register as Faculty / Advisor
-            </button>
-
-        </form>
-
-        <br>
-
-        <p>
-            Already have an account?
-            <a href="login.html">Log In</a>
-        </p>
-
-        <p>
-            <a href="registration-choice.html">
-                Back to Account Type Selection
-            </a>
-        </p>
-
-        <p>
-            <a href="homepage.html">Back to Homepage</a>
-        </p>
-
-        <hr>
-
-        <p>
-            <small>&copy; 2026 InternConnect</small>
-        </p>
+        <a href="#top" class="back-to-top" aria-label="Back to top">
+            &uarr;
+        </a>
 
     </div>
 
 </body>
-
 </html>
-```
