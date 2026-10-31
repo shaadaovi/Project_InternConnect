@@ -1,63 +1,157 @@
+const registrationForm = document.getElementById("facultyForm");
 
-// Get the registration form
-const form = document.getElementById("facultyForm");
 
-// Listen for form submission
-form.addEventListener("submit", function(event) {
 
-    let isValid = true;
+function validateName(name) {
 
-    // Get input values
-    const fullName = document.getElementById("fullName").value.trim();
-    const facultyId = document.getElementById("facultyId").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const contact = document.getElementById("contact").value.trim();
+    const errorMessage = document.getElementById("nameError");
+    const namePattern = /^[A-Za-z ]+$/;
 
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
-
-    // Clear previous error messages
-    document.querySelectorAll(".error-message").forEach(function(error) {
-        error.innerText = "";
-    });
-
-    // 1. Full Name Validation
-    if (/\d/.test(fullName)) {
-        document.getElementById("nameError").innerText =
-            "Please enter a valid name without numbers.";
-        isValid = false;
+    if (name === "") {
+        errorMessage.innerHTML = "Full name cannot be empty.";
+        return false;
     }
 
-    // 2. Faculty / Employee ID Validation
-    if (!/^[FE]/i.test(facultyId)) {
-        document.getElementById("idError").innerText =
-            "Please enter a valid ID starting with F or E.";
-        isValid = false;
+    if (!namePattern.test(name)) {
+        errorMessage.innerHTML = "Name should contain only letters.";
+        return false;
     }
 
-    // 3. Official Email Validation
+    errorMessage.innerHTML = "";
+    return true;
+}
+
+
+
+function validateFacultyID(facultyId) {
+
+    const errorMessage = document.getElementById("idError");
+    const idPattern = /^[FE]/i;
+
+    if (facultyId === "") {
+        errorMessage.innerHTML = "Faculty ID cannot be empty.";
+        return false;
+    }
+
+    if (!idPattern.test(facultyId)) {
+        errorMessage.innerHTML = "Faculty ID must start with F or E.";
+        return false;
+    }
+
+    errorMessage.innerHTML = "";
+    return true;
+}
+
+
+
+function validateEmail(email) {
+
+    const errorMessage = document.getElementById("emailError");
+
+    if (email === "") {
+        errorMessage.innerHTML = "Email cannot be empty.";
+        return false;
+    }
+
     if (!email.includes("@")) {
-        document.getElementById("emailError").innerText =
-            "Please enter a valid email address.";
-        isValid = false;
+        errorMessage.innerHTML = "Email must contain @.";
+        return false;
     }
 
-    // 4. Contact Number Validation
-    if (!/^[0-9]+$/.test(contact)) {
-        document.getElementById("contactError").innerText =
-            "Contact number must contain numbers only.";
-        isValid = false;
+    errorMessage.innerHTML = "";
+    return true;
+}
+
+
+
+function validatePhone(phone) {
+
+    const errorMessage = document.getElementById("contactError");
+    const phonePattern = /^[0-9]+$/;
+
+    if (phone === "") {
+        errorMessage.innerHTML = "Contact number cannot be empty.";
+        return false;
     }
 
-    // 5. Password Matching Validation
+    if (!phonePattern.test(phone)) {
+        errorMessage.innerHTML = "Contact number should contain only digits.";
+        return false;
+    }
+
+    errorMessage.innerHTML = "";
+    return true;
+}
+
+
+
+function validateConfirmPassword(password, confirmPassword) {
+
+    const errorMessage = document.getElementById("passwordError");
+
+    if (password === "") {
+        errorMessage.innerHTML = "Password cannot be empty.";
+        return false;
+    }
+
+    if (confirmPassword === "") {
+        errorMessage.innerHTML = "Please confirm your password.";
+        return false;
+    }
+
     if (password !== confirmPassword) {
-        document.getElementById("passwordError").innerText =
-            "Passwords do not match. Please try again.";
-        isValid = false;
+        errorMessage.innerHTML = "Passwords do not match.";
+        return false;
     }
 
-    // Stop form submission if validation fails
-    if (!isValid) {
+    errorMessage.innerHTML = "";
+    return true;
+}
+
+
+
+registrationForm.addEventListener("submit", function(event) {
+
+  
+    const fullName =
+        document.getElementById("fullName").value.trim();
+
+    const facultyId =
+        document.getElementById("facultyId").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const contact =
+        document.getElementById("contact").value.trim();
+
+    const password =
+        document.getElementById("password").value;
+
+    const confirmPassword =
+        document.getElementById("confirm-password").value;
+
+
+    
+    const nameValid = validateName(fullName);
+
+    const facultyIDValid = validateFacultyID(facultyId);
+
+    const emailValid = validateEmail(email);
+
+    const phoneValid = validatePhone(contact);
+
+    const passwordValid =
+        validateConfirmPassword(password, confirmPassword);
+
+
+    if (
+        !nameValid ||
+        !facultyIDValid ||
+        !emailValid ||
+        !phoneValid ||
+        !passwordValid
+    ) {
         event.preventDefault();
     }
 
