@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InternConnect | Administrator Registration</title>
+
+    <link rel="stylesheet" href="../Admin_css/create-admin.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a class="logo" href="../View/homepage.html">
+            InternConnect
+        </a>
+
+        <p>Platform Administration</p>
+
+    </header>
+
+    <main class="form-page">
+
+        <section class="intro-section">
+
+            <p class="section-label">INVITATION ONLY</p>
+
+            <h1>Administrator Registration</h1>
+
+            <p>
+                Administrator accounts are created by invitation only.
+                Enter the security code from your invitation email and
+                complete your details to register.
+            </p>
+
+        </section>
+
+        <section class="form-card">
+
+            <form id="admin-form" action="#" method="post">
+
+                <h2 class="form-section-title">Invitation and Role</h2>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="security-code">Security code</label>
+                        <input type="text" id="security-code" name="security-code"
+                               placeholder="Code from your invitation email"
+                               autocomplete="off" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admin-role">Administrator role</label>
+                        <select id="admin-role" name="admin-role" required>
+                            <option value="">Select your role</option>
+                            <option value="verification-officer">Verification Officer</option>
+                            <option value="internship-moderator">Internship Moderator</option>
+                            <option value="support-officer">Support Officer</option>
+                            <option value="content-manager">Content Manager</option>
+                            <option value="finance-officer">Reports and Finance Officer</option>
+                        </select>
+                        <p class="field-hint">
+                            For now you choose your role here. Later it will
+                            be assigned in your invitation.
+                        </p>
+                    </div>
+
+                </div>
+
+                <h2 class="form-section-title">Personal Information</h2>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="full-name">Full name</label>
+                        <input type="text" id="full-name" name="full-name"
+                               placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="staff-id">Staff ID (username)</label>
+                        <input type="text" id="staff-id" name="staff-id"
+                               pattern="[A-Za-z0-9_]{4,20}"
+                               title="4 to 20 letters, numbers or underscores"
+                               placeholder="Choose your staff ID" required>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="date-of-birth">Date of birth</label>
+                        <input type="date" id="date-of-birth"
+                               name="date-of-birth" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="Enter your phone number" required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Personal email</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="name@example.com" required>
+                </div>
+
+                <h2 class="form-section-title">Current Address</h2>
+
+                <div class="form-group">
+                    <label for="street-address">Street address</label>
+                    <input type="text" id="street-address" name="street-address"
+                           placeholder="House, road and area" required>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city"
+                               placeholder="Enter your city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postal-code">Postal code</label>
+                        <input type="text" id="postal-code" name="postal-code"
+                               placeholder="Enter postal code" required>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="region">State or region</label>
+                        <input type="text" id="region" name="region"
+                               placeholder="Enter state or region">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country"
+                               placeholder="Enter your country" required>
+                    </div>
+
+                </div>
+
+                <h2 class="form-section-title">Emergency Contact</h2>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="emergency-name">Contact name</label>
+                        <input type="text" id="emergency-name"
+                               name="emergency-name"
+                               placeholder="Enter contact name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergency-relationship">Relationship</label>
+                        <input type="text" id="emergency-relationship"
+                               name="emergency-relationship"
+                               placeholder="For example, parent or spouse"
+                               required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="emergency-phone">Contact phone number</label>
+                    <input type="tel" id="emergency-phone" name="emergency-phone"
+                           placeholder="Enter contact phone number" required>
+                </div>
+
+                <h2 class="form-section-title">Account Security</h2>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="password">Create password</label>
+                        <input type="password" id="password" name="password"
+                               minlength="8" placeholder="At least 8 characters"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm password</label>
+                        <input type="password" id="confirm-password"
+                               name="confirm-password"
+                               placeholder="Re-enter your password" required>
+                    </div>
+
+                </div>
+
+                <p class="form-note">
+                    You can log in with either your staff ID or your email
+                    address. Keep your security code private.
+                </p>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree-terms" name="agree-terms"
+                           required>
+                    <label for="agree-terms">
+                        I agree to handle user data responsibly and follow the
+                        platform rules.
+                    </label>
+                </div>
+
+                <div class="button-row">
+                    <a class="cancel-button" href="../View/homepage.html">Cancel</a>
+                    <button type="submit" class="submit-button">
+                        Register as Administrator
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <p>
+            <small>&copy; 2026 InternConnect. All rights reserved.</small>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
