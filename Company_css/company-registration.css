@@ -1,0 +1,570 @@
+/* 1. GENERAL PAGE SETTINGS*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #faf8f3;
+    color: #263238;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    transition: color 0.2s ease;
+}
+
+/* Normal document flow */
+.company-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/*2. HEADER AND NAVIGATION*/
+
+.company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 22px 7%;
+    background-color: #123c36;
+    color: #ffffff;
+}
+
+.brand-logo {
+    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.brand-logo span {
+    color: #c9824b;
+}
+
+.company-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.company-nav a {
+    color: #d8e5df;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.company-nav a:hover {
+    color: #ffffff;
+}
+
+.company-nav .nav-login {
+    padding: 8px 16px;
+    border: 1px solid #c9824b;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+/*3. MAIN INTRODUCTION*/
+
+.company-page {
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 0 75px;
+}
+
+.page-intro {
+    max-width: 750px;
+    margin-bottom: 38px;
+}
+
+.eyebrow {
+    color: #a9683b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.page-intro h1 {
+    margin: 12px 0;
+    color: #123c36;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    line-height: 1.2;
+}
+
+.page-intro h1 span {
+    color: #a9683b;
+}
+
+.intro-description {
+    max-width: 650px;
+    color: #6b7c76;
+    font-size: 16px;
+}
+
+/*4. TWO-COLUMN PAGE LAYOUT */
+
+.registration-layout {
+    display: grid;
+    grid-template-columns: minmax(230px, 0.75fr) minmax(0, 1.6fr);
+    align-items: start;
+    gap: 28px;
+}
+
+/*5. COMPANY BENEFITS SIDEBAR */
+
+.benefit-panel {
+    position: relative;
+    align-self: stretch;
+
+    padding: 30px 25px;
+    overflow: hidden;
+
+    background-color: #123c36;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+/* Decorative circle placed relative to the sidebar */
+.benefit-panel::after {
+    content: "";
+    position: absolute;
+    right: -55px;
+    top: 140px;
+    z-index: 0;
+
+    width: 150px;
+    height: 150px;
+
+    border: 1px solid rgba(216, 229, 223, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.panel-symbol,
+.benefit-panel h2,
+.benefit-panel > p,
+.benefit-item {
+    position: relative;
+    z-index: 1;
+}
+
+.panel-symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    margin-bottom: 28px;
+
+    border: 1px solid #c9824b;
+    border-radius: 8px;
+
+    color: #e5b48d;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.benefit-panel h2 {
+    margin: 0 0 14px;
+    font-family: Georgia, serif;
+    font-size: 26px;
+    line-height: 1.3;
+}
+
+.benefit-panel > p {
+    color: #d8e5df;
+    font-size: 14px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    margin-top: 27px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(216, 229, 223, 0.2);
+}
+
+.benefit-number {
+    flex-shrink: 0;
+    color: #e5b48d;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.benefit-item h3 {
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+.benefit-item p {
+    margin: 0;
+    color: #d8e5df;
+    font-size: 12px;
+}
+
+.benefit-panel .panel-note {
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(216, 229, 223, 0.2);
+
+    color: #e5b48d;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/*6. REGISTRATION FORM PANEL*/
+
+.form-panel {
+    min-width: 0;
+    padding: 32px;
+
+    background-color: #ffffff;
+    border: 1px solid #e2e8e3;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 24px rgba(18, 60, 54, 0.06);
+}
+
+.form-heading {
+    margin-bottom: 28px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e2e8e3;
+}
+
+.form-step {
+    margin: 0 0 8px;
+    color: #a9683b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.form-heading h2 {
+    margin: 0;
+    color: #123c36;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.form-heading > p:last-child {
+    margin-bottom: 0;
+    color: #6b7c76;
+    font-size: 14px;
+}
+
+/*7. FORM SECTION HEADINGS */
+
+.company-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px 16px;
+}
+
+.form-section-title {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8e3;
+}
+
+.form-section-title span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background-color: #f4e7db;
+    color: #a9683b;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-section-title h3 {
+    margin: 0;
+    color: #123c36;
+    font-size: 16px;
+}
+
+/*8. INPUT FIELDS */
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.field-group label {
+    color: #263f38;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.field-group input,
+.field-group select,
+.field-group textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+
+    border: 1px solid #d0ddd6;
+    border-radius: 5px;
+
+    background-color: #fafcfb;
+    color: #263238;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.field-group input,
+.field-group select {
+    min-height: 44px;
+}
+
+.field-group textarea {
+    resize: vertical;
+    min-height: 75px;
+}
+
+.field-group input:focus,
+.field-group select:focus,
+.field-group textarea:focus {
+    outline: 2px solid #c2dfd0;
+    border-color: #1f6f5b;
+    background-color: #ffffff;
+}
+
+.field-group input::placeholder,
+.field-group textarea::placeholder {
+    color: #899891;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* 9. TERMS AND SUBMIT BUTTON */
+
+.terms-note {
+    padding: 14px;
+    background-color: #faf8f3;
+    border-left: 3px solid #c9824b;
+
+    color: #6b7c76;
+    font-size: 12px;
+}
+
+.submit-area {
+    text-align: center;
+}
+
+.submit-area button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    padding: 15px 18px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #1f6f5b;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.submit-area button span {
+    font-size: 22px;
+}
+
+.submit-area button:hover {
+    background-color: #123c36;
+    transform: translateY(-2px);
+}
+
+.submit-area > p {
+    margin: 15px 0 0;
+    color: #6b7c76;
+    font-size: 13px;
+}
+
+.submit-area > p a {
+    color: #1f6f5b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.submit-area > p a:hover {
+    color: #a9683b;
+    text-decoration: underline;
+}
+
+/*10. BOTTOM NAVIGATION LINKS */
+
+.bottom-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #e2e8e3;
+}
+
+.bottom-links a {
+    color: #1f6f5b;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bottom-links a:hover {
+    color: #a9683b;
+    text-decoration: underline;
+}
+
+/*11. FOOTER */
+
+.company-footer {
+    padding: 22px 5%;
+    background-color: #123c36;
+    color: #d8e5df;
+    text-align: center;
+    font-size: 12px;
+}
+
+/*12. FIXED BACK-TO-TOP BUTTON */
+
+.scroll-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    background-color: #a9683b;
+    color: #ffffff;
+
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(18, 60, 54, 0.18);
+}
+
+.scroll-top:hover {
+    background-color: #123c36;
+}
+
+/*13. RESPONSIVE DESIGN */
+
+@media screen and (max-width: 900px) {
+    .registration-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-panel {
+        padding: 28px;
+    }
+
+    .benefit-panel h2 {
+        max-width: 500px;
+    }
+
+    .page-intro h1 {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .company-header {
+        padding: 18px 5%;
+    }
+
+    .company-nav {
+        gap: 13px;
+    }
+
+    .company-page {
+        width: 92%;
+        padding: 35px 0 50px;
+    }
+
+    .page-intro h1 {
+        font-size: 32px;
+    }
+
+    .form-panel {
+        padding: 22px 17px;
+    }
+
+    .form-heading h2 {
+        font-size: 24px;
+    }
+
+    .company-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section-title,
+    .full-width {
+        grid-column: 1;
+    }
+
+    .bottom-links {
+        flex-direction: column;
+    }
+
+    .scroll-top {
+        right: 14px;
+        bottom: 14px;
+    }
+}
