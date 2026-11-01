@@ -95,11 +95,13 @@
                 </div>
 
 
-                <form action="#" method="post">
+                <!-- Student Registration Form -->
+                <form id="studentRegistrationForm" action="#" method="post" novalidate>
 
                     <div class="form-row">
 
                         <div class="form-group">
+
                             <label for="first-name">
                                 First Name <span>*</span>
                             </label>
@@ -111,10 +113,15 @@
                                 placeholder="Enter your first name"
                                 required
                             >
+
+                            <!-- JavaScript error message -->
+                            <p id="firstNameError"></p>
+
                         </div>
 
 
                         <div class="form-group">
+
                             <label for="last-name">
                                 Last Name <span>*</span>
                             </label>
@@ -126,12 +133,17 @@
                                 placeholder="Enter your last name"
                                 required
                             >
+
+                            <!-- JavaScript error message -->
+                            <p id="lastNameError"></p>
+
                         </div>
 
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="username">
                             Username <span>*</span>
                         </label>
@@ -143,10 +155,12 @@
                             placeholder="Choose a username"
                             required
                         >
+
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="university-email">
                             University Email <span>*</span>
                         </label>
@@ -158,10 +172,15 @@
                             placeholder="yourname@aiub.edu"
                             required
                         >
+
+                        <!-- JavaScript error message -->
+                        <p id="universityEmailError"></p>
+
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="personal-email">
                             Personal Email <span>*</span>
                         </label>
@@ -173,10 +192,15 @@
                             placeholder="example@gmail.com"
                             required
                         >
+
+                        <!-- JavaScript error message -->
+                        <p id="personalEmailError"></p>
+
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="student-id">
                             Student ID <span>*</span>
                         </label>
@@ -188,15 +212,21 @@
                             placeholder="Enter your AIUB student ID"
                             required
                         >
+
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="program">
                             Department or Programme <span>*</span>
                         </label>
 
-                        <select id="program" name="program" required>
+                        <select
+                            id="program"
+                            name="program"
+                            required
+                        >
 
                             <option value="">
                                 Select your programme
@@ -255,17 +285,23 @@
                             </option>
 
                         </select>
+
                     </div>
 
 
                     <div class="form-row">
 
                         <div class="form-group">
+
                             <label for="study-year">
                                 Current Study Year <span>*</span>
                             </label>
 
-                            <select id="study-year" name="study-year" required>
+                            <select
+                                id="study-year"
+                                name="study-year"
+                                required
+                            >
 
                                 <option value="">
                                     Select study year
@@ -288,15 +324,21 @@
                                 </option>
 
                             </select>
+
                         </div>
 
 
                         <div class="form-group">
+
                             <label for="graduation-year">
                                 Expected Graduation Year <span>*</span>
                             </label>
 
-                            <select id="graduation-year" name="graduation-year" required>
+                            <select
+                                id="graduation-year"
+                                name="graduation-year"
+                                required
+                            >
 
                                 <option value="">
                                     Select year
@@ -309,12 +351,14 @@
                                 <option value="2030">2030</option>
 
                             </select>
+
                         </div>
 
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="contact-number">
                             Contact Number <span>*</span>
                         </label>
@@ -327,10 +371,15 @@
                             pattern="[0-9]{11}"
                             required
                         >
+
+                        <!-- JavaScript error message -->
+                        <p id="phoneError"></p>
+
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="current-address">
                             Current Address <span>*</span>
                         </label>
@@ -342,12 +391,14 @@
                             placeholder="Enter your current address"
                             required
                         ></textarea>
+
                     </div>
 
 
                     <div class="form-row">
 
                         <div class="form-group">
+
                             <label for="city">
                                 City <span>*</span>
                             </label>
@@ -359,10 +410,12 @@
                                 placeholder="For example: Dhaka"
                                 required
                             >
+
                         </div>
 
 
                         <div class="form-group">
+
                             <label for="country">
                                 Country <span>*</span>
                             </label>
@@ -374,12 +427,14 @@
                                 value="Bangladesh"
                                 required
                             >
+
                         </div>
 
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="skills">
                             Skills
                         </label>
@@ -390,10 +445,12 @@
                             rows="4"
                             placeholder="For example: HTML, CSS, JavaScript"
                         ></textarea>
+
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="password">
                             Password <span>*</span>
                         </label>
@@ -405,10 +462,15 @@
                             placeholder="Create a password"
                             required
                         >
+
+                        <!-- JavaScript error message -->
+                        <p id="passwordError"></p>
+
                     </div>
 
 
                     <div class="form-group">
+
                         <label for="confirm-password">
                             Confirm Password <span>*</span>
                         </label>
@@ -420,6 +482,10 @@
                             placeholder="Confirm your password"
                             required
                         >
+
+                        <!-- JavaScript error message -->
+                        <p id="confirmPasswordError"></p>
+
                     </div>
 
 
@@ -439,13 +505,23 @@
                     </div>
 
 
+                    <!-- Overall JavaScript validation message -->
+                    <p id="registrationMessage"></p>
+
+
                     <div class="button-row">
 
-                        <button type="reset" class="reset-button">
+                        <button
+                            type="reset"
+                            class="reset-button"
+                        >
                             Clear Form
                         </button>
 
-                        <button type="submit" class="submit-button">
+                        <button
+                            type="submit"
+                            class="submit-button"
+                        >
                             Create Student Account
                         </button>
 
@@ -455,17 +531,22 @@
 
 
                 <p class="bottom-link">
+
                     Already have an account?
+
                     <a href="../View/login.html">
                         Log in here
                     </a>
+
                 </p>
 
 
                 <p class="bottom-link">
+
                     <a href="../View/registration-choice.html">
                         Choose a different account type
                     </a>
+
                 </p>
 
             </div>
@@ -478,12 +559,18 @@
     <footer class="site-footer">
 
         <p>
+
             <small>
                 &copy; 2026 InternConnect. All rights reserved.
             </small>
+
         </p>
 
     </footer>
+
+
+    <!-- Student Registration JavaScript -->
+    <script src="../Student_js/student-registration.js"></script>
 
 </body>
 
