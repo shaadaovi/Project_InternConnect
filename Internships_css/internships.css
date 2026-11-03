@@ -34,6 +34,12 @@ body {
     text-decoration: none;
 }
 
+.logo img {
+    height: 42px;
+    width: auto;
+    vertical-align: middle;
+}
+
 .nav-links {
     display: flex;
     gap: 28px;

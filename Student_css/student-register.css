@@ -49,6 +49,12 @@ body {
     text-decoration: none;
 }
 
+.logo img {
+    height: 42px;
+    width: auto;
+    vertical-align: middle;
+}
+
 .navigation {
     display: flex;
     align-items: center;
