@@ -36,7 +36,7 @@ body {
 
 .registration-page {
     width: 90%;
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
     padding: 65px 0;
 }
@@ -68,46 +68,58 @@ body {
     font-size: 17px;
 }
 
-/* Account type cards */
+/* Account type cards: stacked, wide and short */
 
 .role-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .role-card {
-    padding: 32px;
+    display: grid;
+    grid-template-columns: 60px 1fr 240px;
+    grid-template-areas:
+        "number title button"
+        "number text button";
+    column-gap: 28px;
+    align-items: center;
+    padding: 26px 32px;
     background-color: #ffffff;
     border: 1px solid #d8e5df;
-    border-top: 5px solid #1f6f5b;
+    border-left: 5px solid #1f6f5b;
     border-radius: 12px;
     box-shadow: 0 7px 18px rgba(18, 60, 54, 0.08);
 }
 
 .role-number {
+    grid-area: number;
     margin: 0;
     color: #c9824b;
-    font-size: 27px;
+    font-size: 34px;
     font-weight: bold;
 }
 
 .role-card h2 {
-    margin: 8px 0;
+    grid-area: title;
+    margin: 0 0 4px;
     color: #123c36;
     font-family: Georgia, serif;
-    font-size: 27px;
+    font-size: 25px;
 }
 
 .role-card p:not(.role-number) {
-    min-height: 75px;
+    grid-area: text;
+    min-height: 0;
+    margin: 0;
     color: #6b7c76;
     font-size: 15px;
 }
 
 .role-button {
+    grid-area: button;
     display: block;
-    margin-top: 24px;
+    margin: 0;
     padding: 13px;
     color: #ffffff;
     background-color: #1f6f5b;
@@ -159,16 +171,21 @@ body {
 
 /* Responsive design */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
 
-    .role-grid {
+    .role-card {
         grid-template-columns: 1fr;
-        max-width: 520px;
-        margin: 0 auto;
+        grid-template-areas:
+            "number"
+            "title"
+            "text"
+            "button";
+        row-gap: 6px;
+        padding: 24px;
     }
 
-    .role-card p:not(.role-number) {
-        min-height: auto;
+    .role-button {
+        margin-top: 14px;
     }
 }
 

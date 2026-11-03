@@ -43,15 +43,11 @@ a {
 
 .brand-logo {
     color: #ffffff;
-    font-family: Georgia, serif;
     font-size: 27px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.brand-logo span {
-    color: #c9824b;
-}
 
 .company-nav {
     display: flex;
