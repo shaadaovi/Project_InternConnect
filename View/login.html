@@ -64,15 +64,13 @@
                 Enter your details to continue to your dashboard.
             </p>
 
-            <form action="student-dashboard.html" method="get">
+            <form id="loginForm" action="student-dashboard.html" method="post" novalidate>
 
                 <div class="form-group">
 
                     <label for="account-type">Account Type</label>
 
-                    <select id="account-type"
-                            name="account-type"
-                            required>
+                    <select id="account-type" name="account-type">
 
                         <option value="">Select your account type</option>
                         <option value="student">Student</option>
@@ -81,6 +79,8 @@
                         <option value="admin">Administrator</option>
 
                     </select>
+
+                    <p class="error-message" id="accountTypeError"></p>
 
                 </div>
 
@@ -91,8 +91,9 @@
                     <input type="text"
                            id="user-id"
                            name="user-id"
-                           placeholder="Enter your user ID or email"
-                           required>
+                           placeholder="Enter your user ID or email">
+
+                    <p class="error-message" id="userIdError"></p>
 
                 </div>
 
@@ -103,8 +104,14 @@
                     <input type="password"
                            id="password"
                            name="password"
-                           placeholder="Enter your password"
-                           required>
+                           placeholder="Enter your password">
+
+                    <p class="error-message" id="passwordError"></p>
+
+                    <label class="show-password">
+                        <input type="checkbox" id="show-password">
+                        Show password
+                    </label>
 
                 </div>
 
@@ -120,6 +127,8 @@
                     </a>
 
                 </div>
+
+                <p class="form-message" id="loginMessage"></p>
 
                 <button class="login-button" type="submit">
                     Log In
@@ -147,6 +156,8 @@
         </p>
 
     </footer>
+
+    <script src="../Login_js/login.js"></script>
 
 </body>
 

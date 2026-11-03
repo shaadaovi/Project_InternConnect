@@ -265,3 +265,48 @@ body {
         margin-top: 10px;
     }
 }
+.error-message {
+    display: block;
+    margin: 6px 0 0;
+    color: #b3261e;
+    font-size: 13px;
+}
+
+.form-group .input-error {
+    border-color: #b3261e;
+    background-color: #fdf3f2;
+}
+
+.form-group .show-password {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 10px 0 0;
+    color: #6b7c76;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.form-message {
+    margin: 0 0 18px;
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-message:empty {
+    display: none;
+}
+
+.form-message-error {
+    color: #b3261e;
+    background-color: #fdf3f2;
+    border: 1px solid #b3261e;
+}
+
+.form-message-success {
+    color: #123c36;
+    background-color: #e3f1ec;
+    border: 1px solid #1f6f5b;
+}
